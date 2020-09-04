@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h2> 3.a. Apply animation, fade, hide and show the contents </h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+$(document).ready(function(){
+  $("#button2").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("div").animate({
+        left: '600px',
+      height: '+=150px',
+      width: '+=150px'
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the Hide button, We will disappear.</p>
+<p>If you click on the Show button, We will come back.</p>
+
+<button id="hide">Hide</button> <br><br>
+<button id="show">Show</button> <br><br>
+    
+<button id=button1 >Click to fade in boxes</button> <br><br>
+<button id=button2>Click to fade out boxes</button> <br><br>  
+    
+<div id="div1" style="width:100px;height:100px;display:none;background-color:black;"></div><br>
+<div id="div2" style="width:100px;height:100px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:100px;height:100px;display:none;background-color:darkblue;"></div> <br>
+    
+<button id=button3>Click to start Animation</button><br><br>
+<div style="background-color:red;height:100px;width:100px;position:absolute;"></div>
+</body>
+</html>
